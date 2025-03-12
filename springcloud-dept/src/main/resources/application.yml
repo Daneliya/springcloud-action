@@ -1,0 +1,27 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: springcloud-dept-service                  # 定义微服务名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver     # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/xxl_springboot_action?serverTimezone=UTC&useSSL=false           # 数据库连接地址
+    username: root                                  # 数据库用户名
+    password: xxl666                                # 数据库连接密码
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url: # 定义Eureka服务地址
+#      defaultZone: http://eureka-7001.com:7001/eureka
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    instance-id: springcloud-dept.com                # 显示主机名称
+    prefer-ip-address: true                          # 访问的路径变为IP地址
+info:
+  app.name: springcloud-dept-service
+  company.name: http://luckilyxxl.xyz
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatis配置文件所在路径
+#  type-aliases-package: com.xxl.springboot.integration.mybatis.vo             # 定义所有操作类的别名所在包
