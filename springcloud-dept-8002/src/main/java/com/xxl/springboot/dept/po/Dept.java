@@ -1,13 +1,14 @@
-package com.xxl.springboot.dept.dto;
+package com.xxl.springboot.dept.po;
 
 import java.io.Serializable;
 
 /**
  * @author xxl
- * @date 2025/3/8 22:37
+ * @date 2025/3/8 22:39
  */
 @SuppressWarnings("serial")
-public class DeptDTO implements Serializable {
+public class Dept implements Serializable {
+
     private Long deptno;
     private String dname;
     private String loc;
@@ -37,4 +38,3 @@ public class DeptDTO implements Serializable {
         this.loc = loc;
     }
 }
-

@@ -19,7 +19,7 @@ public interface IDeptDAO {    // 包含有全部的基础Crud支持
      *
      * @return
      */
-    @Select("SELECT dept_no AS deptNo, dept_name AS deptName, loc FROM dept")
+    @Select("SELECT deptno, dname, loc FROM dept")
     List<Dept> findAll();
 
     /**
@@ -28,7 +28,7 @@ public interface IDeptDAO {    // 包含有全部的基础Crud支持
      * @param po
      * @return
      */
-    @Insert("INSERT INTO dept (dept_no, dept_name, loc) VALUES (#{deptno}, #{dname}, #{loc})")
+    @Insert("INSERT INTO dept (deptno, dname, loc) VALUES (#{deptno}, #{dname}, #{loc})")
     Object save(Dept po);
 
     /**
@@ -37,6 +37,6 @@ public interface IDeptDAO {    // 包含有全部的基础Crud支持
      * @param deptno
      * @return
      */
-    @Select("SELECT dept_no, dept_name, loc FROM dept WHERE deptno = #{deptno}")
+    @Select("SELECT deptno, dname, loc FROM dept WHERE deptno = #{deptno}")
     Dept getOne(long deptno);
 }

@@ -9,24 +9,25 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Dept implements Serializable {
 
-    private Long deptNo;
-    private String deptName;
+    private Long deptno;
+    private String dname;
     private String loc;
 
-    public Long getDeptNo() {
-        return deptNo;
+    // setter、getter略
+    public Long getDeptno() {
+        return deptno;
     }
 
-    public void setDeptNo(Long deptNo) {
-        this.deptNo = deptNo;
+    public void setDeptno(Long deptno) {
+        this.deptno = deptno;
     }
 
-    public String getDeptName() {
-        return deptName;
+    public String getDname() {
+        return dname;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setDname(String dname) {
+        this.dname = dname;
     }
 
     public String getLoc() {

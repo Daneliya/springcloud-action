@@ -1,0 +1,18 @@
+server:
+  port: 80
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url: # 定义Eureka服务地址
+      defaultZone: http://127.0.0.1:7001/eureka
+    register-with-eureka: false    # 当前的微服务不注册到eureka之中
+feign:
+  compression:
+    request:
+      mime-types:             # 可以被压缩的类型
+        - text/xml
+        - application/xml
+        - application/json
+      min-request-size: 2048  # 超过2048的字节进行压缩
+logging:
+  level:
+    com.xxl.api.service: DEBUG  # 定义显示转换信息的开发包与日志级别

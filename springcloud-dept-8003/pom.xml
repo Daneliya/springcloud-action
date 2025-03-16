@@ -8,8 +8,8 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>springcloud-dept</artifactId>
-    <name>springcloud-dept</name>
+    <artifactId>springcloud-dept-8003</artifactId>
+    <name>springcloud-dept-8003</name>
     <url>http://maven.apache.org</url>
     <packaging>jar</packaging>        <!-- 项目打包类型 -->
 

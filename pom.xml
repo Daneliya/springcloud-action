@@ -19,6 +19,7 @@
         <!--        <spring-cloud-dependencies.version>Edgware.RELEASE</spring-cloud-dependencies.version>-->
         <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
         <druid.version>1.2.8</druid.version>
+        <micro-service.version>0.0.1</micro-service.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +49,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xxl</groupId>
+                <artifactId>springcloud-api</artifactId>
+                <version>${micro-service.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -133,7 +139,13 @@
     </build>
 
     <modules>
+        <module>springcloud-api</module>
         <module>springcloud-eureka</module>
         <module>springcloud-dept</module>
+        <module>springcloud-dept-8002</module>
+        <module>springcloud-dept-8003</module>
+        <module>springcloud-feign</module>
+        <module>springcloud-sleuth</module>
+        <module>springcloud-ribbon</module>
     </modules>
 </project>
